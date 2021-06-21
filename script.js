@@ -14,6 +14,7 @@ pizzaJson.map((item, index) => {
         let key = e.target.closest('.pizza-item').getAttribute('data-key');
 
         c('.pizzaInfo h1').innerHTML = pizzaJson[key].name;
+        c('.pizzaInfo--desc').innerHTML = pizzaJson[key].description;
 
         c('.pizzaWindowArea').style.opacity = 0;
         c('.pizzaWindowArea').style.display = "flex";
@@ -24,4 +25,3 @@ pizzaJson.map((item, index) => {
 
     c('.pizza-area').append(pizzaItem);
 });
-
