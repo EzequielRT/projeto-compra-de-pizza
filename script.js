@@ -87,6 +87,14 @@ c('.pizzaInfo--addButton').addEventListener('click', ()=>{
             qt:modalQt
         });
     };
-
+    updateCart();
     fecharModal();
 });
+
+function updateCart() {
+    if(cart.length > 0) {
+        c('aside').classList.add('show');
+    } else {
+        c('aside').classList.remove('show');
+    }
+};
