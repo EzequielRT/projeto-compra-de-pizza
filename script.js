@@ -91,7 +91,15 @@ c('.pizzaInfo--addButton').addEventListener('click', ()=>{
     fecharModal();
 });
 
+c('.menu-openner').addEventListener('click', ()=>{
+    if(cart.length > 0) {
+    c('aside').style.left = '0';
+    }
+});
+
 function updateCart() {
+    c('.menu-openner span').innerHTML = cart.length;
+
     if(cart.length > 0) {
         c('aside').classList.add('show');
         c('.cart').innerHTML = '';
